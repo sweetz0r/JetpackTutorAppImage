@@ -47,27 +47,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun JetpackText(header: String,secondlayer: String, thirdlayer: String, modifier: Modifier = Modifier) {
-    Column {
-        Text(
-            text = header,
-            fontSize = 24.sp,
-            modifier = modifier.padding(16.dp)
-        )
-        Text(
-            text = secondlayer,
-            modifier = modifier.padding(16.dp),
-            textAlign = TextAlign.Justify
 
-        )
-        Text(
-            text = thirdlayer,
-            modifier = modifier.padding(16.dp),
-            textAlign = TextAlign.Justify
-        )
-    }
-}
 @Composable
 fun JetpackImage(header: String,secondlayer: String, thirdlayer: String, modifier: Modifier = Modifier) {
 val image = painterResource(R.drawable.bg_compose_background)
@@ -79,13 +59,22 @@ val image = painterResource(R.drawable.bg_compose_background)
 
 
         )
-        JetpackText(
-            header = header,
-            secondlayer = secondlayer,
-            thirdlayer = thirdlayer,
-            modifier = Modifier
+        Text(
+            text = header,
+            fontSize = 24.sp,
+            modifier = modifier.padding(16.dp)
                 //.fillMaxSize() подумать почему эта команда ломает весь код
 
+        )
+        Text(
+            text = secondlayer,
+            modifier = modifier.padding(16.dp),
+            textAlign = TextAlign.Justify
+        )
+        Text(
+            text = thirdlayer,
+            modifier = modifier.padding(16.dp),
+            textAlign = TextAlign.Justify
         )
     }
 
